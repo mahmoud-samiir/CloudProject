@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Updated background color */
+}
+
+header {
+    background-color: #343a40; /* Darker header background color */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.main {
+    padding: 20px;
+}
+
+.hero {
+    background-image: url('background.jpg'); /* Replace 'background.jpg' with your image */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden; /* Ensures smooth transition of background image */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Adding a subtle shadow effect */
+    animation: slideIn 1s ease forwards; /* Slide in animation */
+}
+
+.hero:hover {
+    background-size: 110%; /* Increase background size on hover */
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.hero-content.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #007bff; /* Blue text color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ddd; /* Light gray text color */
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transform transition */
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Scale button on hover */
+}
+
+.about {
+    background-color: #444; /* Darker background color for about section */
+    padding: 50px 0;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Adding a subtle shadow effect */
+    animation: fadeIn 1s ease forwards; /* Fade in animation */
+}
+
+.about-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #fff; /* White text color */
+}
+
+.about-content p {
+    font-size: 16px;
+    color: #ccc; /* Lighter gray text color */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
